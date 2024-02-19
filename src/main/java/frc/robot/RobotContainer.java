@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.commands.PathPlannerAutoCommand;
+import frc.robot.commands.ResetOdometerCommand;
 import frc.robot.oi.OI;
 import frc.robot.subsystems.NavX;
 import frc.robot.subsystems.swerve.DriveSubsystem;
@@ -36,6 +37,7 @@ public class RobotContainer {
 
   private void configureBindings() {
     drive.setDefaultCommand(new PathPlannerAutoCommand(drive, oi));
+    oi.getDriverController().getButton(OI.Buttons.A_BUTTON).onTrue(new ResetOdometerCommand(drive));
   }
 
   public Command getAutonomousCommand() {
