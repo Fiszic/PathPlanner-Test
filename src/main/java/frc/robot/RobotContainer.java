@@ -37,7 +37,7 @@ public class RobotContainer {
 
   private void configureBindings() {
     drive.setDefaultCommand(new PathPlannerAutoCommand(drive, oi));
-    oi.getDriverController().getButton(OI.Buttons.A_BUTTON).onTrue(new ResetOdometerCommand(drive));
+    oi.driverController().getButton(OI.Buttons.A_BUTTON).onTrue(new ResetOdometerCommand(drive));
   }
 
   public Command getAutonomousCommand() {

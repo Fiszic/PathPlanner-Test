@@ -76,7 +76,7 @@ public class DriveSubsystem extends SubsystemBase {
     }
 
     public void setRawMovement(ChassisSpeeds chassisSpeeds) {
-        SwerveModuleState[] swerveModuleStates = Constants.RobotInfo.SWERVE_DRIVE_KINEMATICS.toSwerveModuleStates(chassisSpeeds);
+        SwerveModuleState[] swerveModuleStates = Constants.RobotInfo.SwerveInfo.SWERVE_DRIVE_KINEMATICS.toSwerveModuleStates(chassisSpeeds);
         setModulesStates(
             swerveModuleStates[0],
             swerveModuleStates[1],
