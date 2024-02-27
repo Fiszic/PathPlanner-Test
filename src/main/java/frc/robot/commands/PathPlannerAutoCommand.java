@@ -24,8 +24,8 @@ public class PathPlannerAutoCommand extends Command{
     @Override
     public void execute(){
         ChassisSpeeds chassisSpeeds = new ChassisSpeeds(
-            -oi.getDriverController().getAxis(OI.Axes.LEFT_STICK_Y),
-            oi.getDriverController().getAxis(OI.Axes.LEFT_STICK_X),
+            oi.getDriverController().getAxis(OI.Axes.LEFT_STICK_Y),
+            -oi.getDriverController().getAxis(OI.Axes.LEFT_STICK_X),
             oi.getDriverController().getAxis(OI.Axes.RIGHT_STICK_X)
         );
 
